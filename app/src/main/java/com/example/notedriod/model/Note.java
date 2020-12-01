@@ -1,15 +1,17 @@
 package com.example.notedriod.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Note {
+//Serializable is nodig om data door te geven tussen schermen.
+public class Note implements Serializable {
     private String title, description;
-    private Date dateCreated;
+   // private Date dateCreated;
 
-    public Note(String title, String description, Date dateCreated) {
+    public Note(String title, String description) { //,Date dateCreated) {
         this.title = title;
         this.description = description;
-        this.dateCreated = dateCreated;
+        //this.dateCreated = dateCreated;
     }
     //alt + insert > constructor en getters
     public Note() {
@@ -23,7 +25,7 @@ public class Note {
         return description;
     }
 
-    public Date getDateCreated() {
+    /*public Date getDateCreated() {
         return dateCreated;
-    }
+    }*/
 }
