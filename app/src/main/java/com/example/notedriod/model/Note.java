@@ -8,12 +8,12 @@ public class Note implements Serializable {
     private String title, description;
    // private Date dateCreated;
 
-    public Note(String title, String description) { //,Date dateCreated) {
+
+    public Note(String title, String description) {
         this.title = title;
         this.description = description;
-        //this.dateCreated = dateCreated;
     }
-    //alt + insert > constructor en getters
+
     public Note() {
     }
 
@@ -21,11 +21,15 @@ public class Note implements Serializable {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
 
-    /*public Date getDateCreated() {
-        return dateCreated;
-    }*/
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
